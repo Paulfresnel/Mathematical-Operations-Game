@@ -1,0 +1,45 @@
+h1 {
+    text-align:center;
+  }
+  
+  .extended-space {
+   height: 20px;
+    width: 200px;
+  }
+  
+  .flex-box {
+    text-align:center;
+    border: 1px black solid;
+    padding: 15px 35px 15px 35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:auto;
+  }
+  
+  .flex-buttons {
+    margin: 10px 0px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+  }
+  
+  button{
+    padding:10px 35px;
+  }
+  
+  #button-3 {
+    background-color:green;
+    color:white;
+    font-weight:bold;
+  }
+  
+  article {
+    text-align:center;
+  }
+  
+  #button-1 {
+    background-color:blue;
+    color:white;
+    font-weight:bold;
+  }
