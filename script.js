@@ -1,18 +1,32 @@
 let number1 = Math.floor(Math.random() *100);
 let number2 = Math.floor(Math.random() *100 );
-let numbersSummed = number1 + number2;
+let numbersSummed = number1 + number2;  
  let result = `${numbersSummed}`;
+
+ window.addEventListener('load',() =>{
+  window.addEventListener('keydown', targetting);
+ })
+
+ function targetting (event){
+  if (event.keyCode === 13){
+    guess();
+  }
+}
+
 
 document.body.innerHTML += `<article> Level 1: The equation is: ${number1} + ${number2}</article>`;
 document.querySelector('#button-1').onclick = guess;
 
 function guess() {
   let guessedAnswer = document.querySelector('#number').value; //This returns an empty string result when ran. Why???
+  if (guessedAnswer.length === 0){
+    alert('Please input a number')
+  }  
   if (guessedAnswer === result){
     console.log('Right');
     document.body.innerHTML += `<article> <h2> You're right, congratulations! You can move on to the next level </h2></article><hr>`;
     nextLevel();
-  } else {
+  } else if(guessedAnswer !== result && guessedAnswer.length >0){
 document.body.innerHTML += `<article> <h4> You're wrong, please try again! The result was ${result} </h4></article><hr>`; 
   refresh();
   }
